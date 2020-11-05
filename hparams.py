@@ -1,13 +1,13 @@
 import os
 ### kss ###
 dataset = "kss_v_1.4"
-data_path = os.path.join("/home/minsu/dataset/", dataset)
+data_path = os.path.join("/media/sh/Workspace/DB/KSS_1.4", dataset)
 meta_name = "transcript.v.1.4.txt"	# "transcript.v.1.4.txt" or "transcript.v.1.3.txt" 
 textgrid_name = "TextGrid.zip"
 
 ### set GPU number ###
-train_visible_devices = "6,7"
-synth_visible_devices = "1"
+train_visible_devices = "0"
+synth_visible_devices = "0"
 
 # Text
 text_cleaners = ['korean_cleaners']
@@ -59,8 +59,8 @@ test_path = "./results"
 
 
 # Optimizer
-batch_size = 16
-epochs = 1000
+batch_size = 32
+epochs = 2000
 n_warm_up_step = 4000
 grad_clip_thresh = 1.0
 acc_steps = 1
